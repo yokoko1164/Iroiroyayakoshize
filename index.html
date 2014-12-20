@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <meta name="format-detection" content="telephone=no">
+    <title>いろいろややこしいぜ</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script type="text/javascript" src="phonegap.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/GameCenterPlugin.js"></script>
+    <script type="text/javascript" src="js/underscore.js"></script>
+    <script type="text/javascript" src="coffee/rank.js"></script>
+    <script type="text/javascript" src="coffee/index.js"></script>
+  </head>
+  <body>
+    <div id="header_top"></div>
+    <div class="touch_area">
+      <div id ="container_start">
+        <div id="top">
+          <img src="images/title.png" width="100%">
+        </div>
+        <div id ="record">
+          <div class="text">称号</div>
+          <div class="count"></div>
+        </div><!-- #countquestion -->
+        <div id="column">
+          <div id="icon_ad_left">
+            <div id="icon_ad_left_1" class="icon_ad">
+            </div>
+          </div>
+          <div id="button">
+            <button id="start">すたーと</button>
+          </div><!-- #button -->
+          <div id="icon_ad_right">
+            <div id="icon_ad_right_1" class="icon_ad">
+            </div>
+          </div>
+        </div><!-- #column -->
+        <div id="overlay_advertisement" class="overlay">
+          <div id="advertisement_is">
+            <p id="close_3">×</p>
+          </div>
+        </div><!-- #overlay_advertisemente  -->
+      </div><!-- #container_start -->
+      <div id="container_game">
+        <div id="header">
+          <div id="stage">
+            <div id="stage_text">問題</div>
+            <div id="stage_count">1</div>
+          </div><!-- #stage -->
+          <div id="time">
+            <div id="time_text">時間</div>
+            <div id="time_count_wrapper">
+              <div id="time_count">60</div>
+              <div id="time_change">+3</div>
+            </div><!-- #time_count_wrapper -->
+          </div><!-- #time -->
+        </div><!-- #header -->
+        <hr>
+        <div class="quiz_area">
+        </div>
+        <div class="select_area">
+          <div id="color_0" class="select_color"></div>
+          <div id="color_1" class="select_color"></div>
+          <div id="color_2" class="select_color"></div>
+          <div id="color_3" class="select_color"></div>
+          <div id="color_4" class="select_color"></div>
+          <div id="color_5" class="select_color"></div>
+          <div id="color_6" class="select_color"></div>
+          <div id="color_7" class="select_color"></div>
+        </div>
+        <div id="overlay_false"></div><!-- #overlay_false -->
+        <div id="overlay_close" class="overlay">
+          <p id="end">そこまで</p>
+          <p id="close_1">たっぷ</p>
+        </div><!-- #overlay_close  -->
+      </div><!-- #container_game -->
+      <div id ="container_end">
+        <div id="overlay_rank" class="overlay">
+          <div id="rank_end">
+            <p id="static_text_end">称号</p>
+            <p id="change_text_end"></p>
+          </div>
+            <p id="close_2">たっぷ</p>
+        </div><!-- #overlay_ranke  -->
+        <div id ="countQuestion">
+          <div class="text">きろく</div>
+          <div class="count">0</div>
+          <div class="text">問</div>
+        </div><!-- #countquestion -->
+        <div id="icon_ad_end">
+          <div id="icon_ad_end_1" class="icon_ad">
+          </div>
+        </div>
+        <button id="restart">まだまだ！</button>
+      </div><!-- #container_end -->
+    </div><!-- .touch_area -->
+    <div id="footer">
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,411 @@
+* {
+  margin : 0;
+  padding : 0;
+  font-family: "ヒラギノ明朝 ProN","Hiragino Mincho ProN"; font-weight: bold;
+  font-weight : bold;
+}
+body {
+  background-image : url(images/congruent_pentagon.png);
+}
+#header_top {
+  height : 20px;
+  background : white;
+  overflow: hidden;
+}
+
+.touch_area {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow: hidden;
+}
+
+/*************container_start ************/
+#container_start {
+  text-align : center;
+  width : 100%;
+  height : 100%;
+  overflow : hidden;
+}
+
+#container_start #top {
+  text-align : left;
+  position : relative;
+  height : 40%;
+}
+
+#container_start #top img {
+  position : absolute;
+  top : 5%;
+}
+
+#container_start #record {
+  height : 30%;
+  font-size : 200%;
+  margin : 0;
+}
+
+#container_start #record>.text{
+  color : red;
+}
+
+#container_start #record>.count{
+  color : black;
+}
+
+#container_start #record div {
+  height : 30%
+}
+
+#container_start #column {
+  width : 100%;
+  height : 30%;
+}
+
+#container_start #column #icon_ad_left{
+  padding :0;
+  float : left;
+  width : 25%;
+  height : 100%;
+}
+
+#container_start #column #button{
+  float : left;
+  width : 50%;
+  height : 100%;
+}
+
+#container_start #button button{
+  padding :0;
+  font-size : 20px;
+  width : 100%;
+  height : 80%;
+  margin : 5% 0;
+}
+
+#container_start #column #icon_ad_right{
+  padding :0;
+  float : left;
+  width : 25%;
+  height : 100%;
+}
+
+
+#container_start .icon_ad {
+  width : 100%;
+  height :100%;
+}
+
+/*************container_game ************/
+#container_game {
+  display : none;
+  width : 100%;
+  height : 100%;
+}
+
+#header {
+  width : 100%;
+  height : 10%;
+  overflow: hidden;
+  text-align : center;
+}
+
+#header #stage {
+  float : left;
+  width : 50%;
+  height : 100%
+  overflow: hidden;
+}
+
+
+#header #time {
+  float : left;
+  width : 50%;
+  height : 100%
+}
+
+#header #time_count_wrapper {
+  position : relative;
+}
+
+#header #time_count {
+  position : absolute;
+  left : 43%;
+}
+
+#header #time_change {
+  top : 10px;
+  display : none;
+  position : absolute;
+  left : 60%;
+  -webkit-transition-property: top, display;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+}
+
+#header #time_change.wrong {
+  top : -10px;
+}
+
+#header #time_change.correct {
+  top : -10px;
+}
+
+div.quiz_area{
+  text-align : center;
+  width : 100%;
+  height : 54%;
+  overflow : hidden;
+}
+
+.quiz_color{
+  float : left;
+}
+
+
+
+/**********選択肢の設定***********/
+
+.select_area{
+  width : 100%;
+  height : 36%;
+  overflow : hidden;
+}
+
+.select_color {
+  width : 49%;
+  height: 24%;
+  float : left;
+  border :solid thin gray;
+}
+
+.touch_active {
+  position: relative;
+  top: 1px;
+  left: 1px;
+  -webkit-box-shadow: 0 1px 5px #CCC;
+}
+
+.select_area #color_0 {
+  background-color : black;
+  background: -moz-linear-gradient(bottom, #000000, #222222);
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000), to(#333333));
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+
+.select_area #color_1 {
+  background-color : white;
+  background: -moz-linear-gradient(bottom, white, #EEEEEE);
+  background: -webkit-gradient(linear, left bottom, left top, from(white),to(#EEEEEE));
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.select_area #color_2 {
+  background-color : red;
+  background: -moz-linear-gradient(bottom, #DD0000, #FF0000);
+  background: -webkit-gradient(linear, left bottom, left top, from(#BB0000),to(#FF0000));
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.select_area #color_3 {
+  background-color : yellow;
+  background: -moz-linear-gradient(bottom, #FFFF77, #FFFF00);
+  background: -webkit-gradient(linear, left bottom, left top, from(#FFFF77),to(#FFFF00));
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.select_area #color_4 {
+  background-color : green;
+  background: -moz-linear-gradient(bottom, #00FF00, #00BB00);
+  background: -webkit-gradient(linear, left bottom, left top, from(#00FF00),to(#00BB00));
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.select_area #color_5 {
+  background-color : blue;
+  background: -moz-linear-gradient(bottom, #0000FF, #0000BB);
+  background: -webkit-gradient(linear, left bottom, left top, from(#0000FF),to(#0000BB));
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.select_area #color_6 {
+  background-color : purple;
+  background: -moz-linear-gradient(bottom, #FF44FF, #FF00FF);
+  background: -webkit-gradient(linear, left bottom, left top, from(#FF44FF),to(#FF00FF));
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.select_area #color_7 {
+  background-color : orange;
+  background: -moz-linear-gradient(bottom, #FF6928, #FF4F02);
+  background: -webkit-gradient(linear, left bottom, left top, from(#FF5F17),to(#FF4F02));
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+
+#overlay_false {
+  background : rgba(255,0,0,0.7);
+  display :none;
+  width : 100%;
+  height :100%;
+  position : fixed;
+  top : 0;
+  z-index : 100;
+}
+
+/************overlayに関する設定**************/
+.overlay {
+  width : 100%;
+  height :100%;
+  position : fixed;
+  top : 0;
+  z-index : 100;
+}
+
+#overlay_close {
+  display : none;
+  background : rgba(0,0,0,0.7);
+}
+
+#overlay_close #end {
+  background : rgba(0,0,0,0);
+  height : 30%;
+  font-size : 300%;
+  color : #eee;
+  margin-top : 30%;
+  text-align: center;
+  font-weight : bold;
+  letter-spacing : 0.4em;
+}
+
+#overlay_close #close_1, #close_2{
+  background : rgba(0,0,0,0.5);
+  color : #eee;
+  width : 120px;
+  margin: auto;
+  text-align: center;
+  font-size: 200%;
+  margin-top : 10%;
+  padding:30px;
+  border-radius: 3px;
+}
+
+#overlay_close #close_1:active, #close_2:active, #close_3:active {
+  background : rgba(0,0,0,0.9);
+}
+
+#overlay_rank {
+  display : none;
+  background : rgba(0,0,0,0.5);
+}
+
+#overlay_rank  #rank_end{
+  background : rgba(0,0,0,0.6);
+  height : 30%;
+  color : #eee;
+  font-size : 250%;
+  margin-top : 30%;
+  text-align: center;
+  font-weight : bold;
+  letter-spacing : 0.4em;
+}
+
+#overlay_rank  #static_text_end {
+  color : red;
+}
+
+#overlay_rank  #change_text_end {
+  font-size : 75%;
+  letter-spacing : 0;
+}
+
+#overlay_advertisement{
+  display : none;
+  background : rgba(255,255,255,0.8);
+  position : absolute;
+  overflow : hidden;
+}
+
+#advertisement_is {
+  margin : auto;
+  margin-top : 30%;
+  width : 300px;
+  position : relative;
+}
+
+#nend_adspace_108104_276261 {
+  position : relative;
+  z-index : 1;
+}
+
+#close_3 {
+  background : rgba(0,0,0,0.5);
+  width : 40px;
+  text-align: center;
+  font-size: 150%;
+  border-radius: 3px;
+  color : red;
+  position : absolute;
+  right : 0;
+  z-index : 2;
+}
+
+/*************container_end ************/
+#container_end {
+  display : none;
+  width : 100%;
+  height : 100%;
+  text-align : center;
+}
+
+#container_end #countQuestion{
+  height : 60%;
+  font-size : 400%;
+}
+
+#container_end #countQuestion div.text {
+  top : 100px;
+}
+
+#container_end #countQuestion div.count {
+  top : 50%;
+
+}
+
+#container_end #icon_ad_end {
+  width : 100%;
+  height : 20%;
+}
+
+#container_end button {
+  height : 20%;
+  width : 80%;
+  font-size : 30px;
+  text-align : center;
+}
+
+/************footer**********/
+#footer {
+  margin-top : 3px;
+  width : 100%;
+  height : 60px;
+}
+
